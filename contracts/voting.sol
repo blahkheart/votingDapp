@@ -1,4 +1,5 @@
-pragma solidity ^0.4.18;
+pragma solidity >=0.6.0;
+// pragma solidity ^0.4.18;
 
 contract Voting {
   // list all the candidates
@@ -11,7 +12,7 @@ contract Voting {
   mapping (bytes32 => uint8) private votesReceived;
 
   // Constructor for names of candidates standing in election
-  function Voting(bytes32[] candidateNames) public {
+  constructor(bytes32[] memory candidateNames) public {
     candidates = candidateNames;
   }
 
